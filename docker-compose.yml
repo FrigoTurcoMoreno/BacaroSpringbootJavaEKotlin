@@ -1,0 +1,20 @@
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - back
+    env_file:
+      - ./properties.env
+
+volumes:
+  db_data:
+
+networks:
+  back:

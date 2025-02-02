@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS utenti(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(127) NOT NULL,
+    cognome VARCHAR(127) NOT NULL,
+    email varchar(127) NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS todos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titolo VARCHAR(127) NOT NULL,
+    descrizione VARCHAR(255) NULL,
+    utente_id INT NOT NULL,
+    FOREIGN KEY (utente_id) REFERENCES utenti(id) ON DELETE CASCADE
+);
