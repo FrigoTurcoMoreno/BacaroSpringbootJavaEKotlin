@@ -28,6 +28,6 @@ public class Utente {
     @Column(name = "email", unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "utente")
+    @OneToMany(mappedBy = "utente", cascade = CascadeType.ALL)
     private List<Todo> todoList;
 }

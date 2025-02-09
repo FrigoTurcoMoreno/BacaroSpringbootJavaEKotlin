@@ -6,12 +6,12 @@ import jakarta.persistence.*
 data class Todo(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long? = null,
     @Column(name = "titolo")
     var titolo: String,
     @Column(name = "descrizione")
     var descrizione: String?,
     @ManyToOne
     @JoinColumn(name = "utente_id")
-    val utente: Utente
+    var utente: Utente? = null
 )

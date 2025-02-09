@@ -7,13 +7,13 @@ import jakarta.persistence.*
 data class Utente(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long? = null,
     @Column(name = "nome")
     var nome: String,
     @Column(name = "cognome")
     var cognome: String,
     @Column(name = "email", unique = true)
     var email: String?,
-    @OneToMany(mappedBy = "utente")
-    val todoList: MutableList<Todo>
+    @OneToMany(mappedBy = "utente", cascade = [CascadeType.ALL])
+    var todoList: MutableList<Todo> = mutableListOf()
 )
