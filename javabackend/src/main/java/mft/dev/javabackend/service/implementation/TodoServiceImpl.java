@@ -39,8 +39,7 @@ public class TodoServiceImpl implements TodoService {
     public Todo insertTodo(long id, TodoInsertRequestDTO todo) {
         Utente utenteFound = this.utenteService.getUtente(id);
 
-        Todo newTodo = todo.toTodo();
-        newTodo.setUtente(utenteFound);
+        Todo newTodo = todo.toTodo(utenteFound);
 
         return this.todoRepository.save(newTodo);
     }
@@ -51,10 +50,8 @@ public class TodoServiceImpl implements TodoService {
         Utente utenteFound = this.utenteService.getUtente(id);
 
         List<Todo> newTodos = todo.stream()
-                .map(TodoInsertRequestDTO::toTodo)
-                .peek(t -> {
-                    t.setUtente(utenteFound);
-                }).toList();
+                .map(t -> t.toTodo(utenteFound))
+                .toList();
 
         return this.todoRepository.saveAll(newTodos);
     }

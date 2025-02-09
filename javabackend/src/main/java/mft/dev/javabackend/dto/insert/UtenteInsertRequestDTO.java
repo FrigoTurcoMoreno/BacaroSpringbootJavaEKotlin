@@ -22,7 +22,7 @@ public record UtenteInsertRequestDTO(
                 utente.setCognome(this.cognome());
                 utente.setEmail(this.email());
 
-                List<Todo> todos = todosDto().stream().map(TodoInsertRequestDTO::toTodo).toList();
+                List<Todo> todos = todosDto().stream().map(t -> t.toTodo(utente)).toList();
                 utente.setTodoList(todos);
 
                 return utente;
