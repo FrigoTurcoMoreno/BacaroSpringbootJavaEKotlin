@@ -12,11 +12,11 @@ public interface TodoService {
 
     Todo getTodo(long id);
 
-    Todo insertTodo(long id, TodoInsertRequestDTO todo);
+    Todo insertTodo(long id, TodoInsertRequestDTO dto);
 
-    List<Todo> insertMoltiTodo(long id, List<TodoInsertRequestDTO> todo);
+    List<Todo> insertMoltiTodo(long id, List<TodoInsertRequestDTO> dto);
 
-    Todo updateTodo(long id, TodoUpdateRequestDTO todo);
+    Todo updateTodo(long id, TodoUpdateRequestDTO dto);
 
     void deleteTodo(long id);
 

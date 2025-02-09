@@ -36,20 +36,20 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     @Transactional
-    public Todo insertTodo(long id, TodoInsertRequestDTO todo) {
+    public Todo insertTodo(long id, TodoInsertRequestDTO dto) {
         Utente utenteFound = this.utenteService.getUtente(id);
 
-        Todo newTodo = todo.toTodo(utenteFound);
+        Todo newTodo = dto.toTodo(utenteFound);
 
         return this.todoRepository.save(newTodo);
     }
 
     @Override
     @Transactional
-    public List<Todo> insertMoltiTodo(long id, List<TodoInsertRequestDTO> todo) {
+    public List<Todo> insertMoltiTodo(long id, List<TodoInsertRequestDTO> dto) {
         Utente utenteFound = this.utenteService.getUtente(id);
 
-        List<Todo> newTodos = todo.stream()
+        List<Todo> newTodos = dto.stream()
                 .map(t -> t.toTodo(utenteFound))
                 .toList();
 
@@ -57,10 +57,10 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public Todo updateTodo(long id, TodoUpdateRequestDTO todo) {
+    public Todo updateTodo(long id, TodoUpdateRequestDTO dto) {
         Todo todoFound = this.getTodo(id);
 
-        todoFound = TodoUpdateRequestDTO.toTodo(todo, todoFound);
+        todoFound = TodoUpdateRequestDTO.toTodo(dto, todoFound);
 
         return todoFound;
     }
