@@ -62,7 +62,7 @@ public class TodoServiceImpl implements TodoService {
 
         todoFound = TodoUpdateRequestDTO.toTodo(dto, todoFound);
 
-        return todoFound;
+        return this.todoRepository.save(todoFound);
     }
 
     @Override
