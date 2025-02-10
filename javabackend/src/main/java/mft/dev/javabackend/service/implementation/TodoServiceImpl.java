@@ -1,7 +1,7 @@
 package mft.dev.javabackend.service.implementation;
 
 import jakarta.transaction.Transactional;
-import mft.dev.javabackend.dto.insert.TodoInsertRequestDTO;
+import mft.dev.javabackend.dto.insert.request.TodoInsertRequestDTO;
 import mft.dev.javabackend.dto.update.TodoUpdateRequestDTO;
 import mft.dev.javabackend.model.Todo;
 import mft.dev.javabackend.model.Utente;

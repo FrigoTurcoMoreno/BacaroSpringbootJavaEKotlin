@@ -1,6 +1,6 @@
 package mft.dev.javabackend.service;
 
-import mft.dev.javabackend.dto.insert.UtenteInsertRequestDTO;
+import mft.dev.javabackend.dto.insert.request.UtenteInsertRequestDTO;
 import mft.dev.javabackend.dto.update.UtenteUpdateRequestDTO;
 import mft.dev.javabackend.model.Utente;
 

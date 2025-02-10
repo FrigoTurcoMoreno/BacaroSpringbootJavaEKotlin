@@ -1,4 +1,4 @@
-package mft.dev.javabackend.dto.insert;
+package mft.dev.javabackend.dto.insert.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import mft.dev.javabackend.model.Todo;

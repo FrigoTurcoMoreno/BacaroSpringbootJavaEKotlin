@@ -1,9 +1,10 @@
-package mft.dev.javabackend.dto.insert;
+package mft.dev.javabackend.dto.insert.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import mft.dev.javabackend.model.Todo;
 import mft.dev.javabackend.model.Utente;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public record UtenteInsertRequestDTO(
@@ -22,7 +23,7 @@ public record UtenteInsertRequestDTO(
                 utente.setCognome(this.cognome());
                 utente.setEmail(this.email());
 
-                List<Todo> todos = todosDto().stream().map(t -> t.toTodo(utente)).toList();
+                List<Todo> todos = todosDto() != null ? todosDto().stream().map(t -> t.toTodo(utente)).toList() : new ArrayList<>();
                 utente.setTodoList(todos);
 
                 return utente;
