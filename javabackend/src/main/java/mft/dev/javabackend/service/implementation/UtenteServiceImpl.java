@@ -34,6 +34,7 @@ public class UtenteServiceImpl implements UtenteService {
     }
 
     @Override
+    @Transactional
     public Utente updateUtente(long id, UtenteUpdateRequestDTO dto) {
         Utente utenteFound = this.getUtente(id);
 

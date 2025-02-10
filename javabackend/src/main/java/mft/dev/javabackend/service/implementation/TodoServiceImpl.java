@@ -57,6 +57,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
+    @Transactional
     public Todo updateTodo(long id, TodoUpdateRequestDTO dto) {
         Todo todoFound = this.getTodo(id);
 
@@ -66,6 +67,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
+    @Transactional
     public void deleteTodo(long id) {
         Todo todoFound = this.getTodo(id);
 
@@ -73,6 +75,7 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
+    @Transactional
     public void deleteAllTodoByUtenteId(long id) {
         Utente utente = this.utenteService.getUtente(id);
 
