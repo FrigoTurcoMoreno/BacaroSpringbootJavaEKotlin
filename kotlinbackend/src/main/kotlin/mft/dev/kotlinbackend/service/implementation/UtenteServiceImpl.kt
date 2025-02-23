@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service
 class UtenteServiceImpl @Autowired constructor(
     val utenteRepository: UtenteRepository
 ) : UtenteService {
-    override fun getUtenti(): List<Utente> {
+    override fun getUtenti(): MutableList<Utente> {
         return this.utenteRepository.findAll()
     }
 
