@@ -5,7 +5,7 @@ import mft.dev.kotlinbackend.dto.update.UtenteUpdateRequestDTO
 import mft.dev.kotlinbackend.model.Utente
 
 interface UtenteService {
-    fun getUtenti(): List<Utente>
+    fun getUtenti(): MutableList<Utente>
 
     fun getUtente(id: Long): Utente
 
