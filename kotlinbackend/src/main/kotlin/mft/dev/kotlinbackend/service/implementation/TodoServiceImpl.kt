@@ -1,5 +1,6 @@
 package mft.dev.kotlinbackend.service.implementation
 
+import jakarta.transaction.Transactional
 import mft.dev.kotlinbackend.dto.insert.TodoInsertRequestDTO
 import mft.dev.kotlinbackend.dto.update.TodoUpdateRequestDTO
 import mft.dev.kotlinbackend.model.Todo
@@ -24,6 +25,7 @@ class TodoServiceImpl(
         return this.todoRepository.findById(id).orElseThrow()
     }
 
+    @Transactional
     override fun insertTodo(id: Long, dto: TodoInsertRequestDTO): Todo {
         val utenteFound: Utente = this.utenteService.getUtente(id)
 
@@ -32,6 +34,7 @@ class TodoServiceImpl(
         return this.todoRepository.save(todo)
     }
 
+    @Transactional
     override fun insertMoltiTodo(id: Long, dto: MutableList<TodoInsertRequestDTO>): MutableList<Todo> {
         val utenteFound: Utente = this.utenteService.getUtente(id)
 
@@ -40,6 +43,7 @@ class TodoServiceImpl(
         return this.todoRepository.saveAll(todos)
     }
 
+    @Transactional
     override fun updateTodo(id: Long, dto: TodoUpdateRequestDTO): Todo {
         val todoFound: Todo = this.getTodo(id)
 
@@ -48,12 +52,14 @@ class TodoServiceImpl(
         return todoFound
     }
 
+    @Transactional
     override fun deleteTodo(id: Long) {
         val todoFound: Todo = this.getTodo(id)
 
         this.todoRepository.delete(todoFound)
     }
 
+    @Transactional
     override fun deleteAllTodoByUtenteId(id: Long) {
         val utenteFound: Utente = this.utenteService.getUtente(id)
 
