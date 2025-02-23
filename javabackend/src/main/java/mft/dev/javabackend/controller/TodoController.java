@@ -1,7 +1,7 @@
 package mft.dev.javabackend.controller;
 
-import mft.dev.javabackend.dto.insert.request.TodoInsertRequestDTO;
-import mft.dev.javabackend.dto.insert.response.TodoResponseDTO;
+import mft.dev.javabackend.dto.insert.TodoInsertRequestDTO;
+import mft.dev.javabackend.dto.response.TodoResponseDTO;
 import mft.dev.javabackend.dto.update.TodoUpdateRequestDTO;
 import mft.dev.javabackend.model.Todo;
 import mft.dev.javabackend.service.TodoService;
