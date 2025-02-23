@@ -61,7 +61,7 @@ class TodoController @Autowired constructor(
         }
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/utente/{id}")
     fun insertTodo(@PathVariable("id") id: String, @RequestBody dto: TodoInsertRequestDTO): ResponseEntity<TodoResponseDTO> {
         val idConverted: Long
 
@@ -80,7 +80,7 @@ class TodoController @Autowired constructor(
         }
     }
 
-    @PostMapping("/molti/{id}")
+    @PostMapping("/utente/{id}/molti")
     fun insertMoltiTodo(@PathVariable("id") id: String, @RequestBody dto: MutableList<TodoInsertRequestDTO>): ResponseEntity<MutableList<TodoResponseDTO>> {
         val idConverted: Long
 

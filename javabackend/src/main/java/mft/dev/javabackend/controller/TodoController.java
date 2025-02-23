@@ -59,7 +59,7 @@ public class TodoController {
         }
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/utente/{id}")
     public ResponseEntity<TodoResponseDTO> insertTodo(@PathVariable("id") String id, @RequestBody TodoInsertRequestDTO dto){
         long idConverted;
 
@@ -78,7 +78,7 @@ public class TodoController {
         }
     }
 
-    @PostMapping("/molti/{id}")
+    @PostMapping("/utente/{id}/molti")
     public ResponseEntity<List<TodoResponseDTO>> insertMoltiTodo(@PathVariable("id") String id, @RequestBody List<TodoInsertRequestDTO> dto){
         long idConverted;
 
