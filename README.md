@@ -31,7 +31,7 @@ Il progetto è stato strutturato per essere facilmente eseguito sia tramite un *
     Avvia il tuo **IDE** (come IntelliJ o Eclipse), e apri una copia del progetto. Assicurati di **aprire un singolo backend per ogni istanza** del progetto (uno per Java e uno per Kotlin).
     
 2.  **Verifica la configurazione dell’ambiente**  
-    Controlla che la versione di **Java** (ad esempio, Java 21) e il framework di build (**Maven** e **Gradle**) siano configurati correttamente nel progetto. Se necessario, configura l'ambiente di sviluppo.
+    Controlla che la versione di **Java** (OpenJDK 21) e il framework di build (**Maven** e **Gradle**) siano configurati correttamente nel progetto. Se necessario, configura l'ambiente di sviluppo.
     
 3.  **Esegui l'applicazione**  
     Avvia il progetto cliccando sul tasto **Run** (o "Esegui") direttamente nel tuo IDE. L'applicazione Spring Boot partirà sulla porta predefinita (`http://localhost:8080` per Java e  `http://localhost:8081` per Kotlin).
