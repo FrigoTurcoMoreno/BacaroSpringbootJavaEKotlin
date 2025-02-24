@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "fb14f869-f359-4890-97d9-e9330d3976ed",
+		"name": "Bacaro_Springboot_Kotlin_Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21039992",
+		"_collection_link": "https://restless-shadow-621000.postman.co/workspace/Personal~dbc92b80-a8fb-4c1c-83ad-b04c835be16f/collection/21039992-fb14f869-f359-4890-97d9-e9330d3976ed?action=share&source=collection_link&creator=21039992"
+	},
+	"item": [
+		{
+			"name": "java",
+			"item": [
+				{
+					"name": "utenti",
+					"item": [
+						{
+							"name": "Recupera Utenti",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/utenti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"utenti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera Utente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Utente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Moreno\",\n    \"cognome\": \"Frigo Turco\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/utenti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"utenti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Aggiorna Utente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"mft@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Utente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "todos",
+					"item": [
+						{
+							"name": "Recupera Todo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera Todos Utente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Todo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titolo\": \"Studiare\",\n    \"descrizione\": \"Sviluppo Backend\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Molti Todo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"titolo\": \"Studiare\",\n        \"descrizione\": \"Sviluppo Frontend\"\n    },\n    {\n        \"titolo\": \"Studiare\",\n        \"descrizione\": \"Database\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/todos/utente/1/molti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"utente",
+										"1",
+										"molti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Aggiorna Todo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descrizione\": \"Studiare un altro framework\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Todo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Todos Utente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "kotlin",
+			"item": [
+				{
+					"name": "utenti",
+					"item": [
+						{
+							"name": "Recupera Utenti",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/utenti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"utenti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera Utente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Utente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Moreno\",\n    \"cognome\": \"Frigo Turco\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/utenti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"utenti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Aggiorna Utente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"mft@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Utente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/utenti/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"utenti",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "todos",
+					"item": [
+						{
+							"name": "Recupera Todo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera Todos Utente Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Todo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"titolo\": \"Studiare\",\n    \"descrizione\": \"Sviluppo Backend\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserisci Molti Todo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"titolo\": \"Studiare\",\n        \"descrizione\": \"Sviluppo Frontend\"\n    },\n    {\n        \"titolo\": \"Studiare\",\n        \"descrizione\": \"Database\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/todos/utente/1/molti",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"utente",
+										"1",
+										"molti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Aggiorna Todo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descrizione\": \"Studiare un altro framework\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Todo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/todos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina Todos Utente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/todos/utente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"todos",
+										"utente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
