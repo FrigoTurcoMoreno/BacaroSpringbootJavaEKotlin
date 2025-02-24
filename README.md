@@ -2,7 +2,7 @@
 
 Ciao a tutti,
 
-Questo progetto è realizzato in collaborazione con **BacaroTech** e ha l'obiettivo di analizzare le differenze tra due backend sviluppati con **Spring Boot**, utilizzando due linguaggi distinti: **Java** e **Kotlin**.
+Questo progetto è realizzato in collaborazione con [**BacaroTech**](https://github.com/BacaroTech/BacaroTech) e ha l'obiettivo di analizzare le differenze tra due backend sviluppati con **Spring Boot**, utilizzando due linguaggi distinti: **Java** e **Kotlin**.
 
 L'obiettivo è confrontare le caratteristiche, i vantaggi e le peculiarità di ciascun linguaggio nell'implementazione di un backend moderno.
 
@@ -31,7 +31,7 @@ Il progetto è stato strutturato per essere facilmente eseguito sia tramite un *
     Avvia il tuo **IDE** (come IntelliJ o Eclipse), e apri una copia del progetto. Assicurati di **aprire un singolo backend per ogni istanza** del progetto (uno per Java e uno per Kotlin).
     
 2.  **Verifica la configurazione dell’ambiente**  
-    Controlla che la versione di **Java** (OpenJDK 21) e il framework di build (**Maven** e **Gradle**) siano configurati correttamente nel progetto. Se necessario, configura l'ambiente di sviluppo.
+    Controlla che la versione di **Java** (openjdk 21) e il framework di build (**Maven** e **Gradle**) siano configurati correttamente nel progetto. Se necessario, configura l'ambiente di sviluppo.
     
 3.  **Esegui l'applicazione**  
     Avvia il progetto cliccando sul tasto **Run** (o "Esegui") direttamente nel tuo IDE. L'applicazione Spring Boot partirà sulla porta predefinita (`http://localhost:8080` per Java e  `http://localhost:8081` per Kotlin).
@@ -70,7 +70,7 @@ Come per l'esecuzione tramite IDE, puoi utilizzare la **Postman Collection** per
 
 ## **Ringraziamenti Finali**
 
-Un ringraziamento speciale a **BacaroTech** per la collaborazione a questo progetto. Grazie anche a te per aver dedicato del tempo a leggere e provare il nostro lavoro! La tua attenzione e disponibilità sono molto apprezzate.
+Un ringraziamento speciale a [**BacaroTech**](https://github.com/BacaroTech/BacaroTech) per la collaborazione a questo progetto. Grazie anche a te per aver dedicato del tempo a leggere e provare il nostro lavoro! La tua attenzione e disponibilità sono molto apprezzate.
 
 Se hai domande o suggerimenti, non esitare a contattarci. Buon lavoro e buon divertimento con il progetto!
 
