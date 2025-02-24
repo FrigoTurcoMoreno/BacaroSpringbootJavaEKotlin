@@ -11,7 +11,31 @@ services:
     networks:
       - back
     env_file:
-      - ./properties.env
+      - ./dockerproperties.env
+  
+  java:
+    build:
+      context: ./javabackend
+      dockerfile: Dockerfile
+    container_name: javabackend
+    ports:
+      - "8080:8080"
+    networks:
+      - back
+    env_file:
+      - ./dockerproperties.env
+
+  kotlin:
+    build:
+      context: ./kotlinbackend
+      dockerfile: Dockerfile
+    container_name: kotlinbackend
+    ports:
+      - "8081:8081"
+    networks:
+      - back
+    env_file:
+      - ./dockerproperties.env
 
 volumes:
   db_data:
